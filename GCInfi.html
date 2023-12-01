@@ -216,6 +216,7 @@
   })
 
  let q = query(collection(db, "board"), orderBy("date", "desc"));
+    let docs = await getDocs(q);
   docs.forEach((doc) => {
     let row = doc.data();
 
